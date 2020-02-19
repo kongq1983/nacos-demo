@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>nacos-spring-boot</module>
+        <module>nacos-client-api</module>
     </modules>
 
 
@@ -43,6 +44,7 @@
         <mysql.version>6.0.6</mysql.version>
         <elasticsearch.version>6.5.2</elasticsearch.version>
         <hamcrest-library.version>1.3</hamcrest-library.version>
+        <nacos.client>1.1.4</nacos.client>
     </properties>
 
 
@@ -61,6 +63,14 @@
                 <artifactId>nacos-config-spring-boot-starter</artifactId>
                 <version>0.2.4</version>
             </dependency>
+
+            <!-- https://mvnrepository.com/artifact/com.alibaba.nacos/nacos-client -->
+            <dependency>
+                <groupId>com.alibaba.nacos</groupId>
+                <artifactId>nacos-client</artifactId>
+                <version>${nacos.client}</version>
+            </dependency>
+
 
         </dependencies>
 
