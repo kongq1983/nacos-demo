@@ -1,0 +1,4 @@
+http://192.168.6.170:10002/nacos-spring-boot/config/getDbPassword1
+
+
+http://192.168.6.170:10002/nacos-spring-boot/config/setDbPassword1?password=22

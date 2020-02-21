@@ -6,6 +6,7 @@ import com.alibaba.nacos.api.config.annotation.NacosValue;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
@@ -21,10 +22,19 @@ public class ConfigController {
     @NacosValue(value = "${db.password:-1}", autoRefreshed = true)
     private String dbPassword;
 
+    @NacosValue(value = "${enabled:-1}", autoRefreshed = true)
+    private String enabled;
+
     @RequestMapping(value = "/get", method = RequestMethod.GET)
     @ResponseBody
     public boolean get() {
         return useLocalCache;
+    }
+
+    @RequestMapping(value = "/getEnabled", method = RequestMethod.GET)
+    @ResponseBody
+    public String getEnabled() {
+        return enabled;
     }
 
     @RequestMapping(value = "/getDbPassword", method = RequestMethod.GET)
@@ -42,4 +52,16 @@ public class ConfigController {
 
         return pasword;
     }
+
+    @RequestMapping(value = "/setDbPassword1", method = RequestMethod.GET)
+    @ResponseBody
+    public String setDbPassword1(@RequestParam("password") String password) throws Exception{
+
+        configService.publishConfig("db.password", "test", password);
+
+        String pasword = configService.getConfig("db.password", "test", 3000);
+
+        return pasword;
+    }
+
 }
