@@ -11,6 +11,7 @@
     <modules>
         <module>nacos-spring-boot</module>
         <module>nacos-client-api</module>
+        <module>nacos-spring-boot-prop</module>
     </modules>
 
 

@@ -9,5 +9,22 @@ server:
 
 
 
+nacos:
+  config:
+#    server-addr: nacos.com:8848
+    server-addr: 172.16.5.1:8848
+    # nacos的uuid
+#    group: test
+    namespace: 8e1690ee-2eff-4bed-bc85-dc585270775d
 
+#  management.endpoints.web.exposure.include=*
+#  management.endpoint.health.show-details=always
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
