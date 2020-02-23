@@ -9,7 +9,9 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 @Slf4j
 @SpringBootApplication
-@NacosPropertySource(dataId = "enabled",groupId = "test",autoRefreshed = true,type = ConfigType.PROPERTIES)
+//@NacosPropertySource 相当于一个配置文件  比如application.properties
+//@NacosValue 的 key 从dataId=application.properties的值中，去取
+@NacosPropertySource(dataId = "application.properties",groupId = "test",autoRefreshed = true,type = ConfigType.PROPERTIES,first = true)
 public class NacosSpringBootApplication {
 
 
