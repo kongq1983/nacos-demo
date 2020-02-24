@@ -12,14 +12,14 @@ import org.springframework.context.ConfigurableApplicationContext;
 //@NacosPropertySource 相当于一个配置文件  比如application.properties
 //@NacosValue 的 key 从dataId=application.properties的值中，去取
 @NacosPropertySource(dataId = "application.properties",groupId = "test",autoRefreshed = true,type = ConfigType.PROPERTIES,first = true)
-public class NacosSpringBootApplication {
+public class NacosSpringBootPropApplication {
 
 
     public static void main(String[] args) {
 
 
 
-        ConfigurableApplicationContext context = SpringApplication.run(NacosSpringBootApplication.class, args);
+        ConfigurableApplicationContext context = SpringApplication.run(NacosSpringBootPropApplication.class, args);
 
         log.info("NacosSpringBootApplication argument= {}",args);
 
