@@ -21,6 +21,9 @@ nacos:
     config-long-poll-timeout: 50000
     enable-remote-sync-config: true
     type: yaml
+    bootstrap:
+      enable: true
+      log-enable: true
 
 #  management.endpoints.web.exposure.include=*
 #  management.endpoint.health.show-details=always
