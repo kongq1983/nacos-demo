@@ -12,8 +12,8 @@ import org.springframework.context.ConfigurableApplicationContext;
 // first = true，那么就只会加载第一次的配置，忽略后面的配置
 // 如果first = true 不指定，后面还会加载classpath下的application.yml 这里包括config目录下的都会加载
 // 也就是本地配置文件中的属性 会覆盖nacos的值
-@NacosPropertySource(dataId = "application.yml",groupId = "test",autoRefreshed = true,type = ConfigType.YAML)
-//@NacosPropertySource(dataId = "application.yml",groupId = "test",autoRefreshed = true,type = ConfigType.YAML,first = true)
+//@NacosPropertySource(dataId = "application.yml",groupId = "test",autoRefreshed = true,type = ConfigType.YAML)
+@NacosPropertySource(dataId = "application.yml",groupId = "test",autoRefreshed = true,type = ConfigType.YAML,first = true)
 //@NacosPropertySource(dataId = "application.properties",groupId = "test",autoRefreshed = true,type = ConfigType.PROPERTIES)
 @SpringBootApplication
 public class NacosSpringBootYamlApplication {
