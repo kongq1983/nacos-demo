@@ -32,7 +32,19 @@ public class NacosListenerDemo {
         configService.addListener(dataId, group, new Listener() {
             @Override
             public void receiveConfigInfo(String configInfo) {
-                System.out.println("receive1:" + configInfo);
+                System.out.println("db.password modify , new data :" + configInfo);
+            }
+            @Override
+            public Executor getExecutor() {
+                return null;
+            }
+        });
+
+        String urlDataId = "url";
+        configService.addListener(urlDataId, group, new Listener() {
+            @Override
+            public void receiveConfigInfo(String configInfo) {
+                System.out.println("url modify , new data :" + configInfo);
             }
             @Override
             public Executor getExecutor() {
