@@ -12,7 +12,7 @@ public class NacosDemo1 {
         String group = "test";
 
         // 其实就是调用 ConfigFactory.createConfigService(properties)
-        ConfigService configService = NacosFactory.createConfigService(Util.getProperties());
+        ConfigService configService = NacosFactory.createConfigService(Util.getProperties(tenant));
         // Actively get the configuration.
         String content = configService.getConfig(dataId, group, 5000);
         System.out.println(content);
