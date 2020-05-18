@@ -1,4 +1,4 @@
-package com.kq.nacos.client;
+package com.kq.nacos.client.config;
 
 public class Tool {
 

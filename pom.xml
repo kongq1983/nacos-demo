@@ -13,6 +13,7 @@
         <module>nacos-client-api</module>
         <module>nacos-spring-boot-prop</module>
         <module>nacos-http-api</module>
+        <module>service-register-client-api</module>
     </modules>
 
 
