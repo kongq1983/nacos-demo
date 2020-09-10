@@ -4,10 +4,10 @@ import com.alibaba.nacos.api.naming.NamingFactory;
 import com.alibaba.nacos.api.naming.NamingService;
 import com.alibaba.nacos.api.naming.pojo.Instance;
 import com.kq.nacos.client.config.Util;
-import com.sun.xml.internal.bind.v2.runtime.output.SAXOutput;
 
 import java.util.List;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 public class SelectInstancesDemo {
 
@@ -20,6 +20,9 @@ public class SelectInstancesDemo {
         List<Instance> list = naming.selectInstances(Util.CONFIG_SERVER_KEY, true);
 
         System.out.println("list="+list);
+
+        TimeUnit.MINUTES.sleep(30);
+
     }
 
 }

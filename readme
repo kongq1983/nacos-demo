@@ -26,3 +26,9 @@ curl -X POST "http://127.0.0.1:8848/nacos/v1/cs/configs?dataId=db.password&group
 curl -X GET "http://127.0.0.1:8848/nacos/v1/cs/configs?dataId=nacos.cfg.dataId&group=test&tenant=13279ebf-1bbe-4635-96e6-b28d0c48601f"
 
 账号和密码 都是nacos
+
+
+DROP DATABASE IF EXISTS SEATA_SERVER;
+CREATE DATABASE SEATA_SERVER
+CHARACTER SET UTF8MB4
+COLLATE UTF8MB4_GENERAL_CI;
